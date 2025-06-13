@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nutrition Tracker</title>
+  <link rel="icon" type="image/png" href="Images/dumbell.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="nutrition.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="nutrition.js" defer></script>
+  
+  <nav class="navbar">
+    <a href="home.html" class="back-link" aria-label="Go back">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="back-arrow" aria-hidden="true" focusable="false">
+        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back
+    </a>
+  </nav>
+</head>
+<body>
+    
+    <div class="container">
+    <h1>Nutrition Tracker</h1>
+    <form id="nutrition-form">
+
+      <label>Date of Birth:
+        <input type="date" id="dob" required />
+      </label>
+
+      <label>
+        Weight:
+        <div class="weight-input-group">
+          <input type="number" id="weight" min="1" max="500" step="0.1" required />
+          <select id="weightUnit">
+            <option value="kg" selected>kg</option>
+            <option value="lb">lbs</option>
+          </select>
+        </div>
+      </label>
+
+      <label>
+        Height:
+        <div class="height-input-group">
+          <input type="number" id="height1" min="0" step="1" placeholder="Feet" required />
+          <span id="heightUnit1">ft</span>
+
+          <input type="number" id="height2" min="0" step="1" placeholder="Inches" required />
+          <span id="heightUnit2">in</span>
+
+          <select id="heightUnitToggle">
+            <option value="feet" selected>Feet/Inches</option>
+            <option value="meters">Meters/Cm</option>
+          </select>
+        </div>
+      </label>
+
+      <button type="submit">Calculate</button>
+     
+      
+      
+    </form>
+    <div class="modal fade" id="resultsModal" tabindex="-1" aria-labelledby="resultsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="resultsModalLabel">Nutrition Results</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Calories needed: <span id="calories"></span></p>
+              <p>Protein needed: <span id="protein"></span> grams</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+  </div>
+</body>
+</html>

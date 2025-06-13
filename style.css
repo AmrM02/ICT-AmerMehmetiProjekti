@@ -1,0 +1,20 @@
+body{
+    background-image: url('Images/home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overscroll-behavior: none;
+
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: black;
+
+}
+.underline {
+    width: 90px;
+    height: 6px;
+    background-color: #FFD700;
+    border-radius: 3px;
+}
